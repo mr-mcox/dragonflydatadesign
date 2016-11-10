@@ -1,0 +1,4 @@
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1478817453229	Marionette	INFO	Listening on port 61449
+1478817454212	Marionette	INFO	startBrowser 8f0a3a55-7cb7-3f4a-a538-b07cb09263bb
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
