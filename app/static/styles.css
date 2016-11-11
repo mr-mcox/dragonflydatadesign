@@ -1,0 +1,15 @@
+body { 
+    background-color: #c1c9ca;
+}
+
+.content {
+	margin: 10px;
+}
+
+.topbar {
+	background-color: #262031;
+}
+
+h1.topbar {
+	color: #508c87;
+}
