@@ -5,6 +5,7 @@ app = create_app()
 
 manager = Manager(app)
 
+
 @manager.command
 def runserver():
     app.run(debug=True)
