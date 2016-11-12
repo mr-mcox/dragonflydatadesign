@@ -9,3 +9,7 @@ def get_pr_data():
 @main.route('/project_robin')
 def project_robin():
     return render_template('project_robin.html')
+
+@main.route('/portfolio/<id>')
+def portfolio_page(id):
+    return render_template('portfolio_1.html')
