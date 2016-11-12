@@ -1,11 +1,9 @@
-{% extends "base.html" %}
+{% extends "bootstrap/base.html" %}
+{% block title %}Dragonfly Data{% endblock %}
 
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-<script type="text/javascript" src="{{ url_for('static', filename='d3.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='chroma.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='project_robin.js') }}"></script>
 {% endblock %}
 
 {% block navbar %}
@@ -17,9 +15,4 @@
       <div class="col-xs-12 col-sm-9"><h1 class="topbar">Dragonfly Data Design</h1></div>
     </div>
   </div>
-{% endblock %}
-
-
-{% block content %}
-	<div id="chart"></div>
 {% endblock %}
