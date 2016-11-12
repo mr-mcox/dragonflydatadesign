@@ -9,7 +9,8 @@
 				"-m",
 				"not selenium"
 			],
-			"env": {
+			"env":
+			{
 				"PYTHONPATH": "."
 			},
 			"name": "Unit Tests",
@@ -23,12 +24,19 @@
 				"-m",
 				"current"
 			],
-			"env": {
+			"env":
+			{
 				"PYTHONPATH": "."
 			},
 			"name": "Current",
 			"working_dir": "${project_path}"
 		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"/usr/local/bin/python3\" -u \"$file\""
+		}
 	],
 	"folders":
 	[

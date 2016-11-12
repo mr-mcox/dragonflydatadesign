@@ -138,3 +138,9 @@
 [warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
 [Child 57676] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
 [Child 57676] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1478972937766	Marionette	INFO	Listening on port 62459
+1478972938716	Marionette	INFO	startBrowser 16db0a43-bb43-e442-bfc5-5ccc720f8dfe
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+[Child 58706] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 58706] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
