@@ -9,6 +9,9 @@
 				"-m",
 				"not selenium"
 			],
+			"env": {
+				"PYTHONPATH": "."
+			},
 			"name": "Unit Tests",
 			"working_dir": "${project_path}"
 		},
