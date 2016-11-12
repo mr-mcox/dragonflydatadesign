@@ -114,8 +114,15 @@ boxGridPlot = function(data) {
     return 'translate(' + (field_area_width - button_width) / 2 + ',' + ((7 * legend_spacing) + field_label_height + field_label_bottom_margin + button_margin) + ')';
   }).on("click", function(d, i) {
     return sortCMs(i);
+  }).attr('cursor', 'pointer');
+  sort_buttons.on('mouseover', function(d){
+    d3.select(this).style('opacity', 0.75);
   });
-  sort_buttons.append('rect').attr('height', button_height).attr('width', button_width).style('fill', '#1a1d75');
+  sort_buttons.on('mouseout', function(d){
+    d3.select(this).style('opacity', 1);
+  });
+  // return sort_buttons.append('button').attr('type', 'button').attr('class', 'btn btn-default').text('Sort Field');
+  sort_buttons.append('rect').attr('height', button_height).attr('width', button_width).style('fill', '#1a1d75').attr('rx', 5).attr('ry', 5);
   return sort_buttons.append('text').attr('y', button_height / 2).attr('x', button_width / 2).style('text-anchor', 'middle').text('Sort Field').style('fill', 'white');
 };
 
