@@ -20,7 +20,7 @@ sortCMs = function(i) {
   });
 };
 
-boxGridPlot = function(element, data) {
+boxGridPlot = function(data) {
   var button_height, button_margin, button_width, center_color, cm_area_height, cm_name_width, cm_row_height, cm_rows, cms, color_scales, dist_to_center_color, end_date, field_area_margin, field_area_width, field_label_bottom_margin, field_label_height, field_samples, i, j, k, l, legend_data, legend_groups, legend_height, legend_item_start, legend_items, legend_spacing, len, level_count, ref, ref1, sort_buttons, start_colors, start_date, svg, svg_height, svg_width, time_scale, time_scales, top_axis_height, x_axis;
   cms = data.cms;
   legend_data = data.legend;
@@ -40,7 +40,7 @@ boxGridPlot = function(element, data) {
   cm_area_height = cms.length * cm_row_height;
   svg_height = cm_area_height + top_axis_height + legend_height;
   svg_width = (field_area_width + field_area_margin) * legend_data.length + cm_name_width;
-  svg = d3.select(element[0]).append('svg').attr('height', svg_height).attr('width', svg_width);
+  svg = d3.select("#chart").append('svg').attr('height', svg_height).attr('width', svg_width);
   start_date = new Date(2014, 8, 1);
   end_date = new Date(2015, 4, 1);
   time_scales = [];
@@ -118,3 +118,5 @@ boxGridPlot = function(element, data) {
   sort_buttons.append('rect').attr('height', button_height).attr('width', button_width).style('fill', '#1a1d75');
   return sort_buttons.append('text').attr('y', button_height / 2).attr('x', button_width / 2).style('text-anchor', 'middle').text('Sort Field').style('fill', 'white');
 };
+
+d3.json("/pr_data", boxGridPlot);

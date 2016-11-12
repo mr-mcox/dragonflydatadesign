@@ -16,11 +16,19 @@
 			"working_dir": "${project_path}"
 		},
 		{
-			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-			"name": "Anaconda Python Builder",
-			"selector": "source.python",
-			"shell_cmd": "\"/usr/local/bin/python3\" -u \"$file\""
-		}
+			"cmd":
+			[
+				"venv/bin/py.test",
+				"tests/",
+				"-m",
+				"current"
+			],
+			"env": {
+				"PYTHONPATH": "."
+			},
+			"name": "Current",
+			"working_dir": "${project_path}"
+		},
 	],
 	"folders":
 	[
