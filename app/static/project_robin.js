@@ -121,7 +121,6 @@ boxGridPlot = function(data) {
   sort_buttons.on('mouseout', function(d){
     d3.select(this).style('opacity', 1);
   });
-  // return sort_buttons.append('button').attr('type', 'button').attr('class', 'btn btn-default').text('Sort Field');
   sort_buttons.append('rect').attr('height', button_height).attr('width', button_width).style('fill', '#1a1d75').attr('rx', 5).attr('ry', 5);
   return sort_buttons.append('text').attr('y', button_height / 2).attr('x', button_width / 2).style('text-anchor', 'middle').text('Sort Field').style('fill', 'white');
 };
