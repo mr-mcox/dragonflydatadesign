@@ -5,9 +5,11 @@
 			"cmd":
 			[
 				"venv/bin/py.test",
-				"tests/"
+				"tests/",
+				"-m",
+				"not selenium"
 			],
-			"name": "Run Tests",
+			"name": "Unit Tests",
 			"working_dir": "${project_path}"
 		},
 		{
@@ -20,8 +22,13 @@
 	"folders":
 	[
 		{
-			"path": ".",
-			"folder_exclude_patterns": [".cache", "__pycache__", "venv"]
+			"folder_exclude_patterns":
+			[
+				".cache",
+				"__pycache__",
+				"venv"
+			],
+			"path": "."
 		}
 	]
 }

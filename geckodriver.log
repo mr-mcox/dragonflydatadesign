@@ -118,3 +118,11 @@
 [Child 37115] WARNING: pipe error: Broken pipe: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 677
 [Child 37115] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
 [Child 37115] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1478919474728	Marionette	INFO	Listening on port 56406
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1478919484036	Marionette	INFO	Listening on port 56457
+1478919484974	Marionette	INFO	startBrowser cf05471b-8fb5-e447-a785-20b669c8646f
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+[Child 53434] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 53434] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052

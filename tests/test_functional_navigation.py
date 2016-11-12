@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from flask import url_for
 
-
+@pytest.mark.selenium
 @pytest.mark.usefixtures('live_server')
 class TestLiveServer:
 
