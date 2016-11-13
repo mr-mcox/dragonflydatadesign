@@ -35,6 +35,10 @@ class TestLiveServer:
             )
         except:
             assert False, "Couldn't find Project Robin in title"
+        # When user clicsk on go deeper button
+        browser.find_element_by_id('see_process').click()
+        # Then they are taken to a page that has the spreadsheet picture
+        assert 'pr-1-spreadsheet.png' in browser.page_source
 
     @pytest.mark.usefixtures('live_server')
     def test_project_robin_has_elements(self, browser, app):

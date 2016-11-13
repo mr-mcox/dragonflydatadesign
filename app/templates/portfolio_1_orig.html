@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Dragonfly Data Design - Project Robin{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<h3>The Situation</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<img src="{{ url_for('static', filename='pr-1-spreadsheet.png') }}" class="img-responsive">
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<p>We learned from a regional data analyst that a challenge that coaches in his region faced was in sharing the long term development arc of teachers with other staff who supported them. Coaches had difficulty reconstructing what occurred weeks and months prior as their only analysis tools were spreadsheets that tabulated current results.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<h3>The Solution</h3>
+				<p>To address this need, we applied lean design principles to pilot an interactive high level view on teacher data.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-8">
+				<p>We explored the data to identify structures that could be leveraged to tell the story.</p>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<img src="{{ url_for('static', filename='pr-2-exploration.png') }}" class="img-responsive">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<img src="{{ url_for('static', filename='pr-3A-mockup.png') }}" class="img-responsive">
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<img src="{{ url_for('static', filename='pr-3B-mockup.png') }}" class="img-responsive">
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<p>We created several sketches and conducted user experience interviews with people who represented our target audience. From this, we were able to identify elements that were the most effective in reaching our objectives.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<img src="{{ url_for('static', filename='pr-4-mvp.png') }}" class="img-responsive">
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<p>We created a interactive website with our early adopter’s data as a minimally viable product and conducted further interviews to identify further design improvements. <a href="{{ url_for('main.project_robin')}}">A portion of that website is available here.</a></p>
+			</div>
+		</div>
+		<p>Even at this early stage, coaches were making connections and sharing stories that would not have been possible by staring at a spreadsheet. From an interview with a coach:</p>
+		<i>Pete started the year with his students exhibiting real confusion over the content, and it is hard to isolate that from culture because culture and rigor are so related. Looking at the timeline he revamped his culture a lot around December and you can see the movement. Had he made the culture jump earlier in the year who knows what that would have done for rigor.”</i>
+	</div>
+{% endblock %}
