@@ -1,4 +1,4 @@
-from flask import current_app, render_template
+from flask import current_app, render_template, url_for
 from . import main
 from . import portfolio_content
 
@@ -13,12 +13,16 @@ def project_robin():
     return render_template('project_robin.html')
 
 
-@main.route('/portfolio/<id>')
-def portfolio_page(id):
+@main.route('/portfolio/<p_id>')
+def portfolio_page(p_id):
     return render_template('portfolio_1.html')
 
 
-@main.route('/portfolio/<id>/page/<page>')
-def portfolio_details(id, page):
-    content = portfolio_content.get_page_content()
-    return render_template('portfolio_detail.html', content=content)
+@main.route('/portfolio/<p_id>/page/<page>')
+def portfolio_details(p_id, page):
+    content = portfolio_content.get_page_content(portfolio_item=p_id, page=page)
+    next_url = None
+    if not portfolio_content.is_last_page(p_id, page):
+        next_url = url_for('main.portfolio_details', p_id=p_id, page=int(page)+1)
+    print('next_url is: {}'.format(next_url))
+    return render_template('portfolio_detail.html', content=content, next_url=next_url)

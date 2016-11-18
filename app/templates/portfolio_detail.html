@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if content['title'] %}
 <h3>{{ content['title'] }}</h3>
+{% endif %}
+{% if content['copy'] %}
 <p>{{ content['copy'] }}</p>
+{% endif %}
+{% if content['picture'] %}
 <img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
+{% endif %}
+{% if next_url %}
+<button type="button" href="{{ next_url }}", class="btn btn-primary">
+Next Page</button>
+{% endif %}
 {% endblock %}
