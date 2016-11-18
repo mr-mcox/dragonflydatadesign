@@ -10,6 +10,10 @@
 {% if content['picture'] %}
 <img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
 {% endif %}
+{% if prev_url %}
+<button type="button" href="{{ prev_url }}", class="btn btn-primary">
+Previous Page</button>
+{% endif %}
 {% if next_url %}
 <button type="button" href="{{ next_url }}", class="btn btn-primary">
 Next Page</button>

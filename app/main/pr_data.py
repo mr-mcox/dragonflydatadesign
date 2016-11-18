@@ -21,8 +21,13 @@ def portfolio_page(p_id):
 @main.route('/portfolio/<p_id>/page/<page>')
 def portfolio_details(p_id, page):
     content = portfolio_content.get_page_content(portfolio_item=p_id, page=page)
+
     next_url = None
     if not portfolio_content.is_last_page(p_id, page):
         next_url = url_for('main.portfolio_details', p_id=p_id, page=int(page)+1)
-    print('next_url is: {}'.format(next_url))
-    return render_template('portfolio_detail.html', content=content, next_url=next_url)
+
+    prev_url = None
+    if not portfolio_content.is_first_page(p_id, page):
+        prev_url = url_for('main.portfolio_details', p_id=p_id, page=int(page)-1)
+
+    return render_template('portfolio_detail.html', content=content, next_url=next_url, prev_url=prev_url)
