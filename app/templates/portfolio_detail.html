@@ -3,4 +3,5 @@
 {% block content %}
 <h3>{{ content['title'] }}</h3>
 <p>{{ content['copy'] }}</p>
+<img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
 {% endblock %}
