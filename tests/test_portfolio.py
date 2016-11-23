@@ -1,8 +1,9 @@
 import json
 from flask import url_for
-from unittest.mock import patch
+from unittest.mock import patch, PropertyMock
 from app.main.portfolio import Portfolio
 import pytest
+from app import main
 
 
 def test_get_data(client, app):
@@ -81,11 +82,13 @@ def test_portfolio_page_no_next_if_last(mock, client, app):
 
 @patch.object(Portfolio, 'get_page_content', return_value={'copy': 'text'})
 def test_portfolio_page_has_prev_if_not_first(mock, client, app):
-    with patch('app.main.portfolio.Portfolio.is_first_page') as mock:
-        mock.return_value = False
-        resp = client.get(url_for('main.portfolio_details', p_id=2, page=2))
-        assert bytes(
-            url_for('main.portfolio_details', p_id=2, page=1), 'utf-8') in resp.data
+    with patch('app.main.portfolio.Portfolio.data', new_callable=PropertyMock) as mock_data:
+        mock_data.return_value = None
+        with patch('app.main.portfolio.Portfolio.is_first_page') as mock:
+            mock.return_value = False
+            resp = client.get(url_for('main.portfolio_details', p_id=2, page=2))
+            assert bytes(
+                url_for('main.portfolio_details', p_id=2, page=1), 'utf-8') in resp.data
 
 
 @patch.object(Portfolio, 'get_page_content', return_value={'copy': 'text'})

@@ -3,7 +3,12 @@ class Portfolio(object):
     """Managing portfolio data"""
 
     def __init__(self, data=None):
-        self.data = data
+        self._data = data
+
+    @property
+    def data(self):
+        print('Data mock called')
+        return self._data
 
     def get_page_content(self, portfolio_item, page):
         return self.data[int(portfolio_item)-1][int(page)-1]
