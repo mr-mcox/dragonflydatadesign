@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Dragonfly Data Design - Usage Analytics{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<img src="{{ url_for('static', filename='ue-stacked-bars.png') }}" class="img-responsive">
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<h2>Usage Analytics</h2>
+				<p>Using Box.com logs to analyze usage of products</p>
+				<hr>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<b>Technologies:</b>
+						<ul>
+							<li>Python</li>
+							<li>Pandas</li>
+							<li>Jupyter</li>
+							<li>Bokeh</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<b>Processes:</b>
+						<ul>
+							<li>Data Munging</li>
+							<li>Exploratory Data Visualization</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<a role="button" class="btn btn-primary" href="{{ url_for('main.portfolio_details', p_id=3, page=1) }}" id='see_process'>See Process</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

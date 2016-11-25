@@ -37,3 +37,16 @@
         title: Validating the Importance of Individual Questions
         picture: fo-question-extremes.png
         copy: Plotting the most and least influential questions against the index helps to visualize the nature of the question-index relationship
+-
+    -
+        title: Exploring the Data
+        picture: ue-jupyter-bar.png
+        copy: After processing log data, we utilized the interactive approach of Jupyter to unearth patterns from several directions
+    -
+        title: Showing Over Time
+        picture: ue-jupyter-line.png
+        copy: Plotting usage over time reveals typical cycles of engagement
+    -
+        title: Multiple Views
+        picture: ue-stacked-bars.png
+        copy: The viewer gets a richer perspective when multiple views are arranged side by side
