@@ -7,7 +7,6 @@ class Portfolio(object):
 
     @property
     def data(self):
-        print('Data mock called')
         return self._data
 
     def get_page_content(self, portfolio_item, page):
