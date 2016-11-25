@@ -10,12 +10,14 @@
 {% if content['picture'] %}
 <img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
 {% endif %}
-{% if prev_url %}
-<a role="button" href="{{ prev_url }}", class="btn btn-primary">
+{% if links['prev_url'] %}
+<a role="button" href="{{ links['prev_url'] }}", class="btn btn-primary">
 Previous Page</a>
 {% endif %}
-{% if next_url %}
-<a role="button" href="{{ next_url }}", class="btn btn-primary">
+<a role="button" href="{{ links['portfolio_main'] }}", class="btn btn-primary">
+Up</a>
+{% if links['next_url'] %}
+<a role="button" href="{{ links['next_url'] }}", class="btn btn-primary">
 Next Page</a>
 {% endif %}
 {% endblock %}

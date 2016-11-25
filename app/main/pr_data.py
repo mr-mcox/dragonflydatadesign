@@ -51,4 +51,12 @@ def portfolio_details(p_id, page):
         prev_url = url_for(
             'main.portfolio_details', p_id=p_id, page=int(page)-1)
 
-    return render_template('portfolio_detail.html', content=content, next_url=next_url, prev_url=prev_url)
+    portfolio_main = url_for('main.portfolio_page', p_id=p_id)
+
+    links = {
+        'next_url': next_url,
+        'prev_url': prev_url,
+        'portfolio_main': portfolio_main,
+    }
+
+    return render_template('portfolio_detail.html', content=content, links=links)

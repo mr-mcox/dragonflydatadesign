@@ -70,6 +70,10 @@ def test_is_first_page(portfolio_content):
     assert p.is_first_page(1, 1) == True
     assert p.is_first_page(2, 2) == False
 
+def test_home_link(client, app):
+    resp = client.get(url_for('main.portfolio_details', p_id=1, page=1))
+    assert bytes('href="{}"'.format(url_for('main.portfolio_page', p_id=1)), 'utf-8') in resp.data
+
 
 def test_portfolio_page_has_next_if_not_last(client, app):
     with patch('app.main.portfolio.Portfolio.is_last_page') as mock:
