@@ -1,0 +1,18 @@
+- 
+    - 
+        title: The Challenge
+        picture: pr-1-spreadsheet.png
+        copy: Spreadsheets were a difficult way for teacher coaches to tell the story of teacher development over time
+    -
+        title: Exploring the Data
+        picture: pr-2-exploration.png
+        copy: We explored the data for common patterns that could be developed into rich visualizations
+
+    -
+        title: Mockup 1
+        picture: pr-3A-mockup.png
+        copy: A bar chart was familiar, but made it difficult to see patterns over time
+    -
+        title: Mockup 2
+        picture: pr-3B-mockup.png
+        copy: While unfamiliar, this visualization engaged viewers and helped them see patterns embedded in the data. This design became the departure point for further development
