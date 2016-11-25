@@ -13,7 +13,6 @@ portfolio_data = [
 
 def set_portfolio_content():
     g.portfolio_content = Portfolio(data=portfolio_data)
-    print('Setting live content')
 
 
 @main.before_request

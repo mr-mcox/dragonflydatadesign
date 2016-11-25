@@ -9,6 +9,11 @@ body {
 .topbar {
 	background-color: #262031;
 }
+.portfolio-caption {
+	background-color: #508c87;
+	padding: 20px;
+	margin: 5px;
+}
 
 h1.topbar {
 	color: #508c87;

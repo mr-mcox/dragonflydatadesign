@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-  <div class="content">
+  <div class="container">
     <div class="jumbotron">
-      <div class="container-fluid">
-        <h1 class="text-center">Insights through Design</h1>
-        <p class="text-center">Today's leaders have more data at their fingertips than ever before, yet making decisions has not gotten any easier. ****Something about what they need***. Dragonly Data Designs can help by partnering with decision makers to design thoughtful approaches to data that give them a unique window on reality through the lens of their vision and enable them to make confident, grounded choices.</p>
-        <blockquote class="blockquote-reverse">Imagination is more important than information
-        <footer>Albert Einstein</footer></blockquote>
-      </div>
+      <h1 class="text-center">Insights through Design</h1>
+      <p class="text-center">Today's leaders have more data at their fingertips than ever before, yet making decisions has not gotten any easier. ****Something about what they need***. Dragonly Data Designs can help by partnering with decision makers to design thoughtful approaches to data that give them a unique window on reality through the lens of their vision and enable them to make confident, grounded choices.</p>
+      <blockquote class="blockquote-reverse">Imagination is more important than information
+      <footer>Albert Einstein</footer></blockquote>
     </div>
+  </div>
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-sm-4">
         <div class="thumbnail">
           <img src="{{ url_for('static', filename='project_robin_thumb.png') }}" class="img-responsive">
           <div class="caption">
@@ -20,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-sm-4">
         <div class="thumbnail">
           <img src="{{ url_for('static', filename='dfly_placeholder.jpg') }}" class="img-responsive">
           <div class="caption">
@@ -30,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-sm-4">
         <div class="thumbnail">
           <img src="{{ url_for('static', filename='dfly_placeholder.jpg') }}" class="img-responsive">
           <div class="caption">

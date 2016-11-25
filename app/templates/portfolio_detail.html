@@ -2,22 +2,33 @@
 
 {% block content %}
 {% if content['title'] %}
-<h3>{{ content['title'] }}</h3>
-{% endif %}
-{% if content['copy'] %}
-<p>{{ content['copy'] }}</p>
+<div class="text-center">
+	<h1>{{ content['title'] }}</h1>
+</div>
 {% endif %}
 {% if content['picture'] %}
-<img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
+<img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive center-block">
 {% endif %}
-{% if links['prev_url'] %}
-<a role="button" href="{{ links['prev_url'] }}", class="btn btn-primary">
-Previous Page</a>
+{% if content['copy'] %}
+<div class="container-fluid portfolio-caption">
+	<p>{{ content['copy'] }}</p>
+</div>
 {% endif %}
-<a role="button" href="{{ links['portfolio_main'] }}", class="btn btn-primary">
-Up</a>
-{% if links['next_url'] %}
-<a role="button" href="{{ links['next_url'] }}", class="btn btn-primary">
-Next Page</a>
-{% endif %}
+<div class="row">
+  <div class="col-xs-4">
+		{% if links['prev_url'] %}
+		<a role="button" href="{{ links['prev_url'] }}", class="btn btn-primary">
+		Previous Page</a>
+		{% endif %}
+	</div>
+	<div class="col-xs-4 text-center">
+		<a role="button" href="{{ links['portfolio_main'] }}", class="btn btn-primary">
+	Up</a>
+	</div>
+	<div class="col-xs-4 text-right">
+		{% if links['next_url'] %}
+		<a role="button" href="{{ links['next_url'] }}", class="btn btn-primary">
+		Next Page</a>
+		{% endif %}
+	</div>
 {% endblock %}

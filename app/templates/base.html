@@ -6,13 +6,20 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 {% endblock %}
 
-{% block navbar %}
-  <div class="container-fluid topbar">
-    <div class="row">
-      <div class="col-xs-12 col-sm-3">
-        <img src="{{ url_for('static', filename='dfly_placeholder.jpg') }}" class="img-circle">
-      </div>
-      <div class="col-xs-12 col-sm-9"><h1 class="topbar">Dragonfly Data Design</h1></div>
-    </div>
-  </div>
-{% endblock %}
+{% block body %}
+	{% block navbar %}
+	  <div class="container-fluid topbar">
+	    <div class="row">
+	      <div class="col-xs-12 col-sm-3">
+	        <img src="{{ url_for('static', filename='dfly_placeholder.jpg') }}" class="img-circle">
+	      </div>
+	      <div class="col-xs-12 col-sm-9"><h1 class="topbar">Dragonfly Data Design</h1></div>
+	    </div>
+	  </div>
+	{% endblock %}
+
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+{% endblock body %}
