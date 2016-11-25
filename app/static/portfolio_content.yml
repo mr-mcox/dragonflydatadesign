@@ -16,3 +16,24 @@
         title: Mockup 2
         picture: pr-3B-mockup.png
         copy: While unfamiliar, this visualization engaged viewers and helped them see patterns embedded in the data. This design became the departure point for further development
+-
+    -
+        title: The Forecast
+        picture: fo-national-both-years.png
+        copy: Surveys are given to new teachers at regular intervals. A forecast developed with bayesian modeling helps leaders to predict what end of the year results may be.
+    -
+        title: Assessing Goal Feasibility
+        picture: fo-regional_goals_vs_projections.png
+        copy: Using the same model, we are able to assess the feasibility of end of year goals that regions set
+    -
+        title: Modeling Regional Influence on Culture
+        picture: fo-reg-bars.png
+        copy: A related model helps leaders see the effect that individual regions have on culture. By seeing trends and outliers, they are able to develop theories about culture formation.
+    -
+        title: Relationships Between Index Compenents
+        picture: fo-question-slopes.png
+        copy: Plotting the culture index against the component questions highlights the most influential questions
+    -
+        title: Validating the Importance of Individual Questions
+        picture: fo-question-extremes.png
+        copy: Plotting the most and least influential questions against the index helps to visualize the nature of the question-index relationship

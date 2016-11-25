@@ -33,7 +33,7 @@ def project_robin():
 
 @main.route('/portfolio/<p_id>')
 def portfolio_page(p_id):
-    return render_template('portfolio_1.html')
+    return render_template('portfolio_{}.html'.format(p_id))
 
 
 @main.route('/portfolio/<p_id>/page/<page>')
