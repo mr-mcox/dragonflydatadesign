@@ -1,8 +1,12 @@
  ✔ Write main page header copy @done (16-11-11 10:15)
  ✔ Create table with one blurb @done (16-11-12 11:50)
- ☐ Create linked page from blurb
- ☐ Navigate to linked page from thumbnail
- ☐ Blurb and page for forcasting outcomes
- ☐ Blurb and page for unpacking effectiveness
- ☐ Copy for header
- ☐ Clicking on logo in navbar takes you back to home
+ ✔ Fix main page routing @done (16-11-25 10:32)
+ ✔ Fix links on buttons @done (16-11-25 10:37)
+ ☐ Set up portfolio pages to look nice
+ ☐ Create portfolio page for survey predictions
+ ☐ Create portfolio page for usage analytics
+ ☐ Incorporate logo
+ ☐ Create "About" page
+ ☐ Create navbar
+ ☐ Set up colors to complement logo
+ ☐ Go live on domain

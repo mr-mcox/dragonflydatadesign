@@ -11,11 +11,11 @@
 <img src="{{url_for('static', filename=content['picture'])}}" class="img-responsive">
 {% endif %}
 {% if prev_url %}
-<button type="button" href="{{ prev_url }}", class="btn btn-primary">
-Previous Page</button>
+<a role="button" href="{{ prev_url }}", class="btn btn-primary">
+Previous Page</a>
 {% endif %}
 {% if next_url %}
-<button type="button" href="{{ next_url }}", class="btn btn-primary">
-Next Page</button>
+<a role="button" href="{{ next_url }}", class="btn btn-primary">
+Next Page</a>
 {% endif %}
 {% endblock %}
