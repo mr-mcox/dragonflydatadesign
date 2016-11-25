@@ -1,5 +1,5 @@
 body { 
-    background-color: #c1c9ca;
+    background-color: #8d8d8d;
 }
 
 .nav {
@@ -12,12 +12,22 @@ body {
 	margin: 10px;
 }
 
+.btn-primary {
+	background-color: #b8d134;
+	border-color: #7e7e7e;
+}
+
+.btn-primary:hover {
+	background-color: #68caef;
+	border-color: #7e7e7e;
+}
+
 .topbar {
 	background-color: #262031;
 	padding: 5px;
 }
 .portfolio-caption {
-	background-color: #508c87;
+	background-color: #f8f8f8;
 	padding: 20px;
 	margin: 5px;
 }
