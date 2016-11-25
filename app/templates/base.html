@@ -1,5 +1,7 @@
 {% extends "bootstrap/base.html" %}
+{% import "bootstrap/fixes.html" as fixes %}
 {% block title %}Dragonfly Data{% endblock %}
+
 
 {% block head %}
 {{ super() }}
@@ -8,17 +10,41 @@
 
 {% block body %}
 	{% block navbar %}
-	  <div class="container-fluid topbar">
-	    <div class="row">
-	      <div class="col-xs-12 col-sm-3">
-	        <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='DDD_logo3.png') }}"></a>
-	      </div>
-	    </div>
-	  </div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      	</button>
+				<a class="navbar-left" href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='DDD_logo3.png') }}"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav nav-buttons">
+					<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio<span class="caret"></span></a>
+          	<ul class="dropdown-menu">
+          		<li><a href="{{ url_for('main.portfolio_page', p_id=1) }}">Data Exploration</a></li>
+	            <li><a href="{{ url_for('main.portfolio_page', p_id=2) }}">Forecasting Outcomes</a></li>
+	            <li><a href="{{ url_for('main.portfolio_page', p_id=3) }}">Unpacking Effectiveness</a></li>
+          	</ul>
+          </li>
+					<li><a href="#">About Me</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	{% endblock %}
 
 	<div class="content">
 		{% block content %}
 		{% endblock %}
 	</div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 {% endblock body %}

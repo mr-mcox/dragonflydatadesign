@@ -2,6 +2,12 @@ body {
     background-color: #c1c9ca;
 }
 
+.nav {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 .content {
 	margin: 10px;
 }
