@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-12 col-md-4">
+		<img src="{{ url_for('static', filename='self-portrait.jpg') }}" class="img-responsive img-circle">
+	</div>
+	<div class="col-sm-12 col-md-8">
+		<b>About Me</b>
+		<p>Dragonfly Data is a project of Matthew Cox. I'm a Data Scientist and Designer with six years of experience with educational data</p>
+		<b>Some links:</b>
+		<ul>
+			<li><a href="https://github.com/mr-mcox">GitHub Profile</a></li>
+			<li><a href="http://stackoverflow.com/users/story/4584809">StackOverflow Developer Story</a></li>
+			<li><a href="https://www.linkedin.com/in/matthew-cox-10846178">LinkedIn</a></li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
